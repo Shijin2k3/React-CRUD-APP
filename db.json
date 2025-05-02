@@ -1,0 +1,90 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "name": "jonson diesel",
+        "username": "Johnson",
+        "email": "johnson@gmail.com",
+        "phone": "5654789012",
+        "website": "flipkart.com"
+      },
+      {
+        "id": 2,
+        "name": "maria bell",
+        "username": "MariaB",
+        "email": "maria.bell@gmail.com",
+        "phone": "5654789013",
+        "website": "amazon.com"
+      },
+      {
+        "id": 3,
+        "name": "james carter",
+        "username": "JCarter",
+        "email": "james.carter@gmail.com",
+        "phone": "5654789014",
+        "website": "ebay.com"
+      },
+      {
+        "id": 4,
+        "name": "linda smith",
+        "username": "LSmith",
+        "email": "linda.smith@gmail.com",
+        "phone": "5654789015",
+        "website": "etsy.com"
+      },
+      {
+        "id": 5,
+        "name": "robert brown",
+        "username": "RBrown",
+        "email": "robert.brown@gmail.com",
+        "phone": "5654789016",
+        "website": "bestbuy.com"
+      },
+      {
+        "id": 6,
+        "name": "elizabeth johnson",
+        "username": "EJohnson",
+        "email": "eliz.johnson@gmail.com",
+        "phone": "5654789017",
+        "website": "newegg.com"
+      },
+      {
+        "id": 7,
+        "name": "michael lee",
+        "username": "MLee",
+        "email": "michael.lee@gmail.com",
+        "phone": "5654789018",
+        "website": "target.com"
+      },
+      {
+        "id": 8,
+        "name": "patricia miller",
+        "username": "PMiller",
+        "email": "patricia.miller@gmail.com",
+        "phone": "5654789019",
+        "website": "walmart.com"
+      },
+      {
+        "id": 9,
+        "name": "david wilson",
+        "username": "DWilson",
+        "email": "david.wilson@gmail.com",
+        "phone": "5654789020",
+        "website": "homedepot.com"
+      },
+      {
+        "id": 10,
+        "name": "barbara taylor",
+        "username": "BTaylor",
+        "email": "barbara.taylor@gmail.com",
+        "phone": "5654789021",
+        "website": "overstock.com"
+      },
+      {
+        "id": 11,
+        "name": "neymar",
+        "email": "neymar@gmail.com",
+        "phone": "0987654321"
+      }
+    ]
+  }
