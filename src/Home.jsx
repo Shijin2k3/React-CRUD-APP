@@ -1,16 +1,34 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 
 function Home() {
     const [data,setData]=useState([])
-
+    
+   
     useEffect(()=>{
       axios.get("http://localhost:3000/users")
-      .then(res =>setData(res.data))
+    //   .then(res =>setData(res.data))
+    .then(res => {
+        // Convert id to a number for each user
+        const updatedData = res.data.map(user => ({
+          ...user,
+          id: Number(user.id) // Ensure id is a number
+        }));
+        setData(updatedData);
+      })
       .catch(error => console.log(error))
     },[])
+    const handleDelete=(id)=>{
+        const confirm=window.confirm('Would you like to delete');
+        if(confirm){
+            axios.delete('http://localhost:3000/users/'+id)
+            .then(res => location.reload())
+            .catch(err => console.log(err))
+        }
+    }
+
   return (
     <div className='d-flex  flex-column justify-content-center align-items-center bg-light vh-100'>
         <h1>List of Users</h1>
@@ -37,7 +55,7 @@ function Home() {
                             <td className=''>
                                 <Link to={`/read/${d.id}`} className='btn btn-sm btn-info me-2'>Read</Link>
                                 <Link to={`/update/${d.id}`} className='btn btn-sm btn-primary me-2'>Edit</Link>
-                                <button className='btn btn-sm btn-danger '>Delete</button>
+                                <button onClick={e=>handleDelete(d.id)} className='btn btn-sm btn-danger '>Delete</button>
                             </td>
                            </tr> 
                         ))

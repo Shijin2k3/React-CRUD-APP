@@ -15,7 +15,21 @@ function  Create() {
     }
     const handleSubmit=(e)=>{
         e.preventDefault();
-        axios.post("http://localhost:3000/users",values)
+        if (!values.name || !values.email || !values.phone) {
+            alert("Please fill in all fields.");
+            return;
+        }
+         // Fetch existing users to determine the next ID
+    axios.get("http://localhost:3000/users")
+    .then(res => {
+        const maxId = res.data.length > 0 ? Math.max(...res.data.map(user => Number(user.id))) : 0;
+        const newUser = { ...values, id: maxId + 1 }; // Assign a new numeric ID
+
+        // Post the new user with the numeric ID
+        return axios.post("http://localhost:3000/users", newUser);
+    })
+
+       // axios.post("http://localhost:3000/users",values)
         .then(res=>{
              console.log(res)
              navigate('/')
